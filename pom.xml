@@ -82,7 +82,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.product-creator.Application</mainClass>
+                            <mainClass>com.productcreator.Application</mainClass>
                             <outputDirectory>${project.basedir}/docker</outputDirectory>
                         </configuration>
                     </execution>
