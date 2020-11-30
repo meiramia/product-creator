@@ -7,7 +7,12 @@
     <groupId>com.productcreator</groupId>
     <artifactId>product-creator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>resources</module>
+        <module>services</module>
+        <module>apis</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
