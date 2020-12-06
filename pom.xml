@@ -7,22 +7,26 @@
     <groupId>com.productcreator</groupId>
     <artifactId>product-creator</artifactId>
     <version>1.0-SNAPSHOT</version>
-   <!-- <modules>
-        <module>resources</module>
-        <module>services</module>
-        <module>apis</module>
-    </modules>-->
-    <packaging>war</packaging>
+   <modules>
+        <module>product-creator-resources</module>
+        <module>product-creator-services</module>
+        <module>product-creator-apis</module>
+       <module>product-creator-application</module>
+   </modules>
+    <packaging>pom</packaging>
 
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.3.RELEASE</version>
         <relativePath/>
     </parent>
+    <properties>
+        <ms.version>1.0-SNAPSHOT</ms.version>
+        <tomcat.version>8.0.43</tomcat.version>
+    </properties>-->
 
-
-
+<!--
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -59,6 +63,18 @@
             <artifactId>jaxb-impl</artifactId>
             <version>2.2.11</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.productcreator</groupId>
+            <artifactId>resources</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.productcreator</groupId>
+            <artifactId>services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,7 +91,23 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <warSourceDirectory>WebContent</warSourceDirectory>
+                    <webResources>
+                        <resource>
+                            <directory>/resources/target/</directory>
+                            <includes>
+                                <include>*.jar</include>
+                            </includes>
+                            <targetPath>WEB-INF/lib</targetPath>
+                        </resource>
+                        <resource>
+                            <directory>/services/target</directory>
+                            <includes>
+                                <include>*.jar</include>
+                            </includes>
+                            <targetPath>WEB-INF/lib</targetPath>
+                        </resource>
+                    </webResources>
+
                 </configuration>
             </plugin>
             <plugin>
@@ -94,11 +126,8 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
-    <properties>
-        <tomcat.version>8.0.43</tomcat.version>
-    </properties>
 
 
 </project>
