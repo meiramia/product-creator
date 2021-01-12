@@ -9,3 +9,5 @@ Current API will be exposed at : <I>http://localhost:8080/productCreator/GetProd
 
 
 initial build using : https://stackify.com/guide-docker-java/ 
+
+Added GitHub Actions 
